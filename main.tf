@@ -8,7 +8,7 @@ resource "aws_instance" "pohleng-Webserver" {
   vpc_security_group_ids = ["sg-020d927b4429e4fcf"]
   
   tags = {
-    Name = "pohleng-Webserver-${count.index + 3}"
+    Name = "pohleng-Webserver-${count.index + 1}"
   }
 }
 
