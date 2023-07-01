@@ -39,3 +39,11 @@ sudo python3 -m pip install --user ansible
 EOF
 }
 
+terraform {
+  backend "s3" {
+    bucket = "pohleng-bucket"
+    key    = "pohleng-bucket/terraform-dev"
+    region = "eu-west-1"
+  }
+}
+
