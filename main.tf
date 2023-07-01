@@ -5,7 +5,7 @@ resource "aws_instance" "pohleng-Webserver" {
   key_name = "pohleng_kp"
   associate_public_ip_address = true
   subnet_id = "subnet-d29198b4"
-  vpc_security_group_ids = "sg-020d927b4429e4fcf"
+  vpc_security_group_ids = ["sg-020d927b4429e4fcfp"]
 
   tags = {
     Name = "pohleng-Webserver-${count.index}"
@@ -17,8 +17,8 @@ resource "aws_instance" "pohleng-Ansibleserver" {
   instance_type = "t2.micro"
   key_name = "pohleng_kp"
   associate_public_ip_address = true
-  subnet_id = subnet-d29198b4
-  vpc_security_group_ids = sg-020d927b4429e4fcf
+  subnet_id = "subnet-d29198b4"
+  vpc_security_group_ids = ["sg-020d927b4429e4fcfp"]
 
   tags = {
     Name = "pohleng-Ansibleserver"      
