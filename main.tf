@@ -6,8 +6,7 @@ resource "aws_instance" "pohleng-Webserver" {
   associate_public_ip_address = true
   subnet_id = "subnet-d29198b4"
   vpc_security_group_ids = ["sg-020d927b4429e4fcf"]
-  vpc_id = 
-
+  
   tags = {
     Name = "pohleng-Webserver-${count.index}"
   }
