@@ -42,7 +42,7 @@ EOF
 terraform {
   backend "s3" {
     bucket = "pohleng-bucket"
-    key    = "terraform-dev"
+    key    = "terraform-dev.tfstate"
     region = "eu-west-1"
   }
 }
